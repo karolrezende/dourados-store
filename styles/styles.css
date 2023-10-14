@@ -12,7 +12,7 @@
     height: 98vh;
 }
 .first-section{
-    background: url("/img/53231665834_6e53337f1c_o.jpg");
+    background: url("./img/53231665834_6e53337f1c_o.jpg");
     
     background-size: cover;
 }
@@ -87,7 +87,7 @@ li:hover{
 
 /*segunda section*/
 .second-section{
-    background-image: url('/img/53241665961_ecfba139a2_o.jpg');
+    background-image: url('./img/53241665961_ecfba139a2_o.jpg');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -102,7 +102,7 @@ li:hover{
 }
 /*terceira section*/
 .tirth-section{
-    background-image: url('/img/second-one.jpg');
+    background-image: url('./img/second-one.jpg');
     background-size: cover;
     display: flex;
    
