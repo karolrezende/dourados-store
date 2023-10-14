@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Poppins', sans-serif;
+}
+.section{
+    height: 98vh;
+}
+.first-section{
+    background: url("/img/53231665834_6e53337f1c_o.jpg");
+    
+    background-size: cover;
+}
+.first-section-header{
+    display: flex;  
+    padding: 1em 4em;
+    justify-content: space-between;
+    height: 6vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(0,0,0,0.25);
+}
+.first-section-div{
+    display: flex;
+    align-items: center;
+}
+.first-section-img{
+    width: 250px;
+}
+.first-section-ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 2em;
+    color: white;
+}
+.first-section-ul>li{
+    text-align: center;
+    font-weight: 500;
+}
+.second-section-ul{
+    display: flex;
+    list-style-type: none;
+    gap: 2em;
+}
+li:hover{
+    cursor: pointer;
+}
+.title-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.title{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    line-height: 0.8;
+}
+.title-1, .title-2{
+    font-size:9em;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em black
+}
+.title-1{
+    text-align: left;
+}
+.title-2{
+    text-align: right;
+    font-size: 7em;
+    line-height: 0.2;
+}
+.title-3{
+    color: white;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 4;
+}
+
+/*segunda section*/
+.second-section{
+    background-image: url('/img/53241665961_ecfba139a2_o.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.black{
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/*terceira section*/
+.tirth-section{
+    background-image: url('/img/second-one.jpg');
+    background-size: cover;
+    display: flex;
+   
+}
+
+.container{
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient( to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 5%, hsl(0 0% 0% / 1) 95%, hsl(0 0% 0% / 0) );
+    display: flex;
+}
+.container_ul, .container_ul_2{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    margin-top: 6em;
+    animation: slide 60s linear infinite;
+    min-width: 150%;
+}
+.container_li{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px black;
+    background-color: rgb(241, 241, 241);
+}
+.container_li  > img{
+    width: 200px;
+    height: 250px;
+    border-radius: 4px;
+}
+.container_button{
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 8px;
+    background-color: darkgreen;
+    color: white;
+    font-weight: 700;
+}
+.container_button:hover{
+    background-color: rgb(1, 78, 1);
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0) ;
+    }
+    100%{
+        transform: translateX(-95%);
+    }
+}
