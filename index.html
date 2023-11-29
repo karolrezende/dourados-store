@@ -1,32 +1,35 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dourados Store</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" type="image/x-icon" href="../img/dourado-logo.svg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
     <main>
         <section class="first-section section">
             <header class="first-section-header">
                 <div class="first-section-div">
                     <img src="./img/logo.png" class="first-section-img" alt="dourado logo nome">
                     <ul class="first-section-ul">
-                        <li>Home</li>
-                        <li>Categorias</li>
-                        <li>Sobre</li>
+                        <li class="t">Home</li>
+                        <li class="t">Categorias</li>
+                        <li class="t">Sobre</li>
                     </ul>
                 </div>
                 <div class="second-section-div">
                     <ul class="second-section-ul">
-                        <li class="second-section-li">
-                            <img src="./img/icons/search.svg" alt="pesquisar">
+                        <li class="second-section-li search-li">
+                            <img src="./img/icons/search.svg" alt="pesquisar" class="search">
                         </li>
-                        <li class="second-section-li">
-                            <img src="./img/icons/local_mall.svg" alt="bolsa">
+                        <li class="second-section-li search-li2">
+                            <img class="bolsa" src="./img/icons/local_mall.svg" alt="bolsa">
                         </li>
                         <li class="second-section-li">
                             <img src="./img/icons/person.svg" alt="pessoa">
@@ -34,12 +37,12 @@
                     </ul>
                 </div>
             </header>
-            <div>
+            <div class="header">
                 <div class="title-block">
                     <div class="title">
-                        <h1 class="title-1">DOURADOS</h1>
-                        <h1 class="title-2">STORE</h1>
-                        <h3 class="title-3">O coração de Cuiabá, na sua casa.</h3>
+                        <h1 class="title-1 ">DOURADOS</h1>
+                        <h1 class="title-2 ">STORE</h1>
+                        <h3 class="title-3 ">O coração de Cuiabá, na sua casa.</h3>
                     </div>
                 </div>
             </div>
@@ -95,9 +98,77 @@
             </div>
         </section>
         <section class="tirth-section section">
-
+            <div class="toggle">
+                <button class="toggle-button">Gostaria de receber nossas newsellers? Clique para saber mais!</button>
+                <div class="toggle-content" style="display: none;">
+                    <p>Você irá receber com sucesso!</p>
+                </div>
+            </div>
         </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+</body>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>© 2023 Dourados Store</p>
+            <ul>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        // Método de Efeito do jQuery
+
+        $(".search").click(function () {
+            const contentExists = $(".search-li .content").length > 0; // Verifica se o conteúdo existe
+
+            if (contentExists) {
+                $(".search-li .content").remove(); // Remove o conteúdo se já existir
+            } else {
+                $(".search-li").append("<p class='content'>Digite o que procura!</p>"); // Adiciona o conteúdo se não existir
+            }
+        });
+
+        $(".toggle-button").click(function () {
+            $(".toggle-content").slideToggle();
+        });
+
+        // Método do jQuery para manipulação do HTML
+        $(".title-1").html("Dourados");
+
+        $(".bolsa").click(function () {
+            const contentExists = $(".search-li2 .content2").length > 0;
+
+            if (contentExists) {
+                $(".search-li2 .content2").remove();
+            } else {
+                $(".search-li2").append("<p class='content2'>Nada adicionado ao carrinho!</p>");
+            }
+        });
+
+        // Método de evento do jQuery
+        $(".container_button").click(function () {
+            $(this).text("Adicionado ao carrinho!");
+        });
+
+
+
+
+    });
+
+</script>
+
 </html>
